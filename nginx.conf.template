@@ -1,0 +1,7 @@
+server {
+  listen ${NGINX_PORT};
+  server_name ${SERVER_NAME};
+  location / {
+    proxy_pass http://notify:${SERVICE_PORT};
+  }
+}
